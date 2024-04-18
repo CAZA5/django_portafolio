@@ -7,6 +7,8 @@ pip install -r requirements.txt
 
 # Convert static asset files
 python manage.py collectstatic --no-input
-
+pip install -r requirements.txt
 # Apply any outstanding database migrations
 python manage.py migrate
+chmod a+x build.sh
+gunicorn web_personal.wsgi
