@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Contacto</title>
+</head>
+<body>
+    {% extends 'core/base.html'%}
+        <!--Cragar imagen de cabecera-->
+    {% block background %} {% load static %} {% static 'core/img/home-bg.jpg' %} {% endblock %}
+
+    <!--Cabecera dinámica-->
+    {% block headers %}
+        <h1>Contacto</h1>
+        <span class="subheading">AlejandroOrtiz@gmail.com</span>
+
+    {% endblock %}
+    {% block content %}
+        <!-- Contenido Principal -->
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <p>Manejo las herramientas como Ilustrator, Ps, Unity y Blender</p>
+          <br>
+          <p><b>Teléfono:</b> +09 876 543 210</p>
+          <p><b>Honorarios:</b> 60€/h (precio base)</p>
+        </div>
+      </div>
+    </div>
+     <!-- Pié de página -->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+          </div>
+        </div>
+      </div>
+    </footer>
+    {% endblock %}
+</body>
+</html>

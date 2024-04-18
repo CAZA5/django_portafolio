@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Home</title>
+</head>
+<body>
+    <!--Usar plantilla base-->
+    {% extends 'core/base.html' %}
+    <!--Cragar imagen de cabecera-->
+    {% block background %} {% load static %} {% static 'core/img/home-bg.jpg' %} {% endblock %}
+
+    <!--Cabecera dinámica-->
+    {% block headers %}
+        <h1>Alejandro Ortiz</h1>
+        <span class="subheading">Diseñador</span>
+    {% endblock %}
+</body>
+</html>

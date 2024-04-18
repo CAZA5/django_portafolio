@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Portafolio</title>
+</head>
+<body>
+    {% extends 'core/base.html' %}
+    <!--Cragar imagen de cabecera-->
+    {% block background %} {% load static %} {% static 'core/img/home-bg.jpg' %} {% endblock %}
+
+    <!--Cabecera dinámica-->
+    {% block headers %}
+        <h1>Mis proyectos</h1>
+        <span class="subheading">Arte digital</span>
+
+    {% endblock %}
+    {% block content%}
+
+    <div class="container">
+	      <!-- Proyecto -->
+
+	      <!-- Proyecto -->
+		  {% for proyecto in proyectos %}
+
+	      <div class="row project">
+	      	<div class="col-lg-3 col-md-4 offset-lg-1">
+				{% load static %}
+			      <img class="img-fluid" src="{{proyecto.imagen.url}}" alt="imagen">
+	      	</div>
+	        <div class="col-lg-7 col-md-8">
+	      		<h2 class="section-heading title">{{proyecto.titulo}}</h2>
+	          <p>{{proyecto.descripcion}}</p>
+				{% if proyecto.url %}
+	          <p><a href="{{proyecto.url}}">Ir a proyecto</a></p>
+				{% endif %}
+	      	</div>
+	      </div>
+		  </div>
+		  {% endfor %}
+    <!-- Pié de página -->
+	    <footer>
+	    	<hr>
+	      <div class="container">
+	        <div class="row">
+	          <div class="col-lg-8 col-md-10 mx-auto">
+
+	          </div>
+	        </div>
+	      </div>
+	    </footer>
+	    <!-- Bootstrap y Javascripts -->
+	    <script src="vendor/jquery/jquery.min.js"></script>
+	    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+	    <script src="js/clean-blog.min.js"></script>
+
+    {% endblock %}
+</body>
+</html>

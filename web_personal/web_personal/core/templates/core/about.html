@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>About</title>
+</head>
+<body>
+    {% extends 'core/base.html'%}
+        <!--Cragar imagen de cabecera-->
+    {% block background %} {% load static %} {% static 'core/img/home-bg.jpg' %} {% endblock %}
+
+    <!--Cabecera dinámica-->
+    {% block headers %}
+        <h1>Sobre mi</h1>
+        <span class="subheading">Licenciado en animación y arte digital</span>
+
+    {% endblock %}
+    {% block content %}
+        <!-- Contenido Principal -->
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3 col-md-4 offset-lg-1">
+          <img class="img-fluid avatar" src="{% static 'core/img/ale.jpg' %}" alt="ale">
+        </div>
+        <div class="col-lg-7 col-md-8">
+          <h2 class="section-heading">Alejandro Ortiz</h2>
+          <p>He realizado proyectos de diseño y animación orientados a tecnologías de realidad aumentada</p>
+
+        </div>
+      </div>
+    </div>
+
+    <hr>
+
+    <!-- Pié de página -->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+
+          </div>
+        </div>
+      </div>
+    </footer>
+    {% endblock %}
+</body>
+</html>

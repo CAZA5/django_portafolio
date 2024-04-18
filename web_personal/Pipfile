@@ -1,0 +1,22 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+django = "*"
+django-ckeditor = "*"
+pillow = "*"
+pylint = "*"
+pylint-django = "*"
+dj-database-url = "*"
+psycopg2-binary = "*"
+whitenoise = {extras = ["brotli"], version = "*"}
+
+[dev-packages]
+
+[requires]
+python_version = "3.12"
+
+[scripts]
+web_personal = "pipenv run python web_personal/manage.py runserver"
