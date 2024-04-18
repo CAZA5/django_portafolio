@@ -9,6 +9,7 @@ pip install -r requirements.txt
 python manage.py collectstatic --no-input
 pip install -r requirements.txt
 # Apply any outstanding database migrations
+gunicorn web_personal.wsgi
 python manage.py migrate
 chmod a+x build.sh
-gunicorn web_personal.wsgi
+
