@@ -12,7 +12,7 @@ pip install -r requirements.txt
 # Apply any outstanding database migrations
 #install gunicorn
 pipenv install gunicorn
-gunicorn web_personal.wsgi
+pipenv gunicorn web_personal.wsgi
 python manage.py migrate
 chmod a+x build.sh
 
